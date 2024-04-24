@@ -22,10 +22,9 @@ class Y {
   }
 }
 ```
-<strong>Module Answer:</strong>
-<br>
+## Answer
 No; a private member cannot be accessed outside of its class.
-<br>
+<br><br>
 
 <strong>Extra Answer:</strong>
 <br>
@@ -41,8 +40,7 @@ This fragment is incorrect because the instance variable "count" has an access s
 ## Question
 An access specifier must _______ a member's declaration.
 
-<strong>Answer:</strong>
-<br>
+## Answer
 precede
 <br>
 </details>
@@ -61,8 +59,7 @@ members of the <strong>Stack</strong> class private.
 (Hint: You can use the <strong>Queue</strong> class as a model; just
 change the way that the data is accessed.)
 
-<strong>Module Answer:</strong>
-<br>
+## Answer
 ```
 // Module Queue Class: https://gist.github.com/lirrnaiad/aaea654aef8139092a33217ab6d52cdb
 
@@ -119,4 +116,32 @@ public class Stack {
 <br>
 Other answer (Generic Stack Implementation using Singly Linked List):
 <br> https://gist.github.com/lirrnaiad/fdb577dd5d88b8b66cd5b91d149a55fb
+</details>
+
+<details>
+<summary><h2>Number 4</h2></summary>
+  
+## Question
+Given this class,
+```
+class Test {
+  int a;
+  Test(int i) { a = i; }
+}
+```
+Write a method called <b>swap()</b> that exchanges the contents of the objects referred to by
+two <b>Test</b> object references.
+<br>
+
+## Answer
+```
+void swap(Test obj1, Test obj2) {
+  int temp;
+
+  temp = obj1.a;
+  obj1.a = obj2.a;
+  obj2.a = temp;
+}
+```
+
 </details>
