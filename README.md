@@ -145,3 +145,184 @@ void swap(Test obj1, Test obj2) {
 ```
 
 </details>
+
+
+<details>
+<summary><h2>Number 5</h2></summary>
+  
+## Question
+Is the following fragment correct?
+```
+class X {
+  int meth(int a, int b) { ... }
+  String meth(int a, int b) { ... }
+}
+```
+
+## Answer
+No. Overloaded methods can have different return types, but they do not play a role in overload
+resolution. Overloaded methods must have different parameter lists.
+</details>
+
+<details>
+<summary><h2>Number 6</h2></summary>
+  
+## Question
+Write a recursive method that displays the contents of a string backwards.
+
+## Answer
+```
+public class Backwards {
+    private String str;
+
+    public Backwards (String s) {
+        str = s;
+    }
+
+    public void reverse(int index) {
+        if (index != str.length() - 1) {
+            reverse(index + 1);
+        }
+
+        System.out.println(str.charAt(index));
+    }
+}
+```
+</details>
+
+<details>
+<summary><h2>Number 7</h2></summary>
+  
+## Question
+If all objects of a class need to share the same variable, how must you declare that variable?
+
+## Answer
+Shared variables are declared as <b>static</b>.
+</details>
+
+
+<details>
+<summary><h2>Number 8</h2></summary>
+  
+## Question
+Why might you need to use a static block?
+
+## Answer
+A <b>static</b> block is used to perform any initializations related to the class, before any objects are created.
+</details>
+
+
+<details>
+<summary><h2>Number 9</h2></summary>
+  
+## Question
+What is an inner class?
+
+## Answer
+An inner class is a nonstatic nested class.
+</details>
+
+
+<details>
+<summary><h2>Number 10</h2></summary>
+  
+## Question
+To make a member accessible by only other members of its class, what access specifier
+must be used?
+
+## Answer
+<b>private</b>
+</details>
+
+
+<details>
+<summary><h2>Number 11</h2></summary>
+  
+## Question
+The name of a method plus its parameter list constitutes the method’s _________.
+
+## Answer
+signature
+</details>
+
+
+<details>
+<summary><h2>Number 12</h2></summary>
+  
+## Question
+An <b>int</b> argument is passed to a method by using call-by-__________.
+
+## Answer
+value
+</details>
+
+
+<details>
+<summary><h2>Number 13</h2></summary>
+  
+## Question
+Create a varargs method called <b>sum()</b> that sums the <b>int</b> values passed to it. Have it return
+the result. Demonstrate its use.
+
+## Answer
+<b> Method </b>
+```
+public class SumIt {
+    int sum(int ... n) {
+        int sum = 0;
+        for (int i = 0; i < n.length; i++) {
+            sum += n[i];
+        }
+
+        return sum;
+    }
+}
+```
+<br>
+<b> Demonstration </b>
+
+```
+public class Demo {
+    public static void main(String[] args) {
+        SumIt sumObj = new SumIt();
+
+        int total = sumObj.sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        System.out.println("Sum: " + total);
+    }
+}
+```
+</details>
+
+
+<details>
+<summary><h2>Number 14</h2></summary>
+  
+## Question
+Can a varargs method be overloaded?
+
+## Answer
+Yes.
+</details>
+
+
+<details>
+<summary><h2>Number 15</h2></summary>
+  
+## Question
+Show an example of an overloaded varargs method that is ambiguous.
+
+
+
+## Answer
+```
+int varargsMethod (int ... v) {}
+
+int varargsMethod (int d, int ... v) {}
+```
+
+If we try to call varargsMethod() with one argument, like this,
+```
+varArgsMethod(5);
+```
+the compiler can’t determine which version of the method to invoke.
+</details>
