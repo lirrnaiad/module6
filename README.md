@@ -31,3 +31,16 @@ This fragment is incorrect because the instance variable "count" has an access s
 <br>
 No; a private member cannot be accessed outside of its class.
 <br>
+</details>
+
+<details>
+<summary><h2>Number 2</h2></summary>
+  
+## Question
+An access specifier must _______ a member's declaration.
+
+<strong>Answer:</strong>
+<br>
+precede
+<br>
+</details>
