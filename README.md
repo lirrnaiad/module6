@@ -61,8 +61,6 @@ change the way that the data is accessed.)
 
 ## Answer
 ```
-// Module Queue Class: https://gist.github.com/lirrnaiad/aaea654aef8139092a33217ab6d52cdb
-
 public class Stack {
     private char stack[];
     private int top;
