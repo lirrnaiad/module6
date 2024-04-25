@@ -320,7 +320,7 @@ int varargsMethod (int d, int ... v) {}
 
 If we try to call varargsMethod() with one argument, like this,
 ```
-varArgsMethod(5);
+varargsMethod(5);
 ```
 the compiler can’t determine which version of the method to invoke.
 </details>
